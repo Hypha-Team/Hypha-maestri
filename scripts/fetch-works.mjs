@@ -1,5 +1,5 @@
 // Downloads every artwork listed in src/data/commons.json from Wikimedia Commons into public/works/.
-// Files already present are skipped. Run: node scripts/fetch-works.mjs
+// Files already present are skipped. Images are stored as they come; recompress big ones before committing. Run: node scripts/fetch-works.mjs
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 
 const list = JSON.parse(readFileSync('src/data/commons.json', 'utf8'))
