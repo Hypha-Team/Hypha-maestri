@@ -9,6 +9,13 @@ import { Avatar, Button, CheckedBadge, Icon, Pic, Tag, UniBadge, toast } from '.
 import { useReveal } from '../motion/motion'
 import { useApp } from '../state/AppContext'
 import { PortfolioChoices } from './Welcome'
+import { samplePictures } from '../data/commons'
+
+/** Four period artworks standing in for photos of past shows. */
+const pastShows = (id: string) => {
+  const start = [...id].reduce((n, c) => n + c.charCodeAt(0), 0) % samplePictures.length
+  return [0, 1, 2, 3].map((i) => samplePictures[(start + i * 7) % samplePictures.length])
+}
 
 export function ConnectButton({ personId }: { personId: string }) {
   const { t, connectionWith, connect, userId } = useApp()
@@ -142,8 +149,8 @@ export default function Profile() {
           <section className="mt-10" aria-labelledby="ps">
             <h2 id="ps" className="mb-4 text-xl font-semibold">{t('profile.pastShows')}</h2>
             <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-              {[11, 12, 13, 14].map((s, i) => (
-                <Pic key={s} picture={{ art: { style: (['horizon', 'stone', 'strata', 'blocks'] as const)[i], seed: 960 + s + person.id.length, ratio: 1 } }} alt="" />
+              {pastShows(person.id).map((picture, i) => (
+                <Pic key={i} picture={{ ...picture, ratio: 1 }} alt="" />
               ))}
             </div>
           </section>

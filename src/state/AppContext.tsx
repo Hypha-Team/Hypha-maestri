@@ -38,7 +38,8 @@ interface Data {
   lang: Lang
 }
 
-const STORAGE_KEY = 'hypha-demo-v1'
+// Separate from the original HYPHA site, which shares the same domain.
+const STORAGE_KEY = 'hypha-maestri-v1'
 
 function initialData(): Data {
   return {

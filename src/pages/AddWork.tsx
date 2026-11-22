@@ -7,6 +7,7 @@ import { Button, Icon, Pic, toast, type IconSvg } from '../components/ui'
 import type { Block, Picture } from '../data/types'
 import type { Key } from '../i18n/en'
 import { useApp } from '../state/AppContext'
+import { samplePictures } from '../data/commons'
 
 type Draft =
   | { kind: 'text'; body: string }
@@ -91,7 +92,7 @@ export default function AddWork() {
         ) : (
           <div className="grid gap-2">
             <ImagePick onPick={setPicture} label={t('add.chooseImage')} />
-            <button type="button" onClick={() => setPicture({ art: { style: 'stone', seed: Math.floor(Math.random() * 999), ratio: 0.8 } })} className="text-sm text-thread underline underline-offset-2">
+            <button type="button" onClick={() => setPicture(samplePictures[Math.floor(Math.random() * samplePictures.length)])} className="text-sm text-thread underline underline-offset-2">
               {t('add.sample')}
             </button>
           </div>

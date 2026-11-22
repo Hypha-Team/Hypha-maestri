@@ -52,7 +52,7 @@ function MakingOf({ block }: { block: Extract<Block, { type: 'video' }> }) {
     return <video src={block.file} controls className="aspect-video w-full rounded-[var(--radius-work)] bg-ink" />
   }
   const poster = block.poster
-  const sketch: Picture = { art: { style: 'sketch', seed: 'art' in poster ? poster.art.seed + 1 : 7, ratio: 16 / 9 } }
+  const sketch: Picture = 'art' in poster ? { art: { style: 'sketch', seed: poster.art.seed + 1, ratio: 16 / 9 } } : poster
   return (
     <figure>
       <div ref={stage} className="relative aspect-video overflow-hidden rounded-[var(--radius-work)] bg-ink">

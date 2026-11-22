@@ -8,6 +8,7 @@ import type { Discipline, OpportunityKind } from '../data/types'
 import { useReveal } from '../motion/motion'
 import { useApp } from '../state/AppContext'
 import { DiscoverTabs } from './Discover'
+import { samplePictures } from '../data/commons'
 
 const KINDS: OpportunityKind[] = ['open-call', 'commission', 'exhibition']
 
@@ -93,7 +94,7 @@ export function NewOpportunity() {
           onClick={() => {
             addOpportunity({
               id: `o${Date.now()}`, providerId: me.id, kind, title: title.trim(), description: desc.trim(), deadline: deadline || '—',
-              disciplines: disc, area: me.area, fee: fee || undefined, picture: { art: { style: 'horizon', seed: Date.now() % 997, ratio: 1.4 } },
+              disciplines: disc, area: me.area, fee: fee || undefined, picture: samplePictures[Date.now() % samplePictures.length],
             })
             toast(t('opp.published'))
             navigate('/opportunities')

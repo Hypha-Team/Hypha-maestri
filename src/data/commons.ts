@@ -10,3 +10,6 @@ type Entry = { key: string; file: string; w: number; h: number; ext: string }
 export const P = Object.fromEntries(
   (list as Entry[]).map((e) => [e.key, { src: `${import.meta.env.BASE_URL}works/${e.key}.${e.ext}`, ratio: e.w / e.h } satisfies Picture]),
 ) as Record<string, Picture>
+
+/** Every artwork, for places that need a sample picture. */
+export const samplePictures: Picture[] = Object.values(P)
