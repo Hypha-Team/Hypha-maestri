@@ -1,0 +1,91 @@
+/*
+  HYPHA theme — change colours and fonts here.
+  Every colour below becomes a Tailwind class: bg-linen, text-ink, border-thread, text-red …
+*/
+@import "tailwindcss";
+
+@theme {
+  /* Palette taken from the embroidered logo */
+  --color-red: #D7261E;        /* signal red: wordmark, the one main action, badges */
+  --color-red-deep: #B01C15;   /* red on hover / pressed */
+  --color-linen: #F1EBE3;      /* page background, like the logo's linen */
+  --color-linen-deep: #E4DACD; /* surfaces, chips, dividers */
+  --color-paper: #FBF8F4;      /* the wall behind artworks */
+  --color-ink: #1F1B18;        /* text */
+  --color-thread: #857B71;     /* secondary text */
+
+  /* Typography */
+  --font-display: "Bagel Fat One", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Type scale (roughly a 1.25 ratio) */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-4xl: 3.052rem;
+  --text-5xl: 3.815rem;
+
+  --radius-work: 4px;   /* artworks: almost square, like a print */
+  --radius-ui: 14px;    /* panels and inputs */
+}
+
+html {
+  background: var(--color-linen);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  background: var(--color-linen);
+  min-height: 100dvh;
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+:focus-visible {
+  outline: 2.5px solid var(--color-red);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+::selection { background: var(--color-red); color: var(--color-linen); }
+
+/* Display headlines: soft and heavy, like the stitched letters */
+.font-display { letter-spacing: -0.01em; line-height: 0.95; }
+
+/* Hide scrollbars on horizontal chip rows */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Elements revealed on scroll start visible when motion is reduced */
+@media (prefers-reduced-motion: no-preference) {
+  .js-motion [data-reveal] { opacity: 0; }
+}
+
+/* Demo spotlight: a pulsing red ring around the element to press */
+.demo-spot {
+  position: relative;
+  z-index: 30;
+  box-shadow: 0 0 0 3px var(--color-linen), 0 0 0 6px var(--color-red);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .demo-spot { animation: demo-pulse 1.4s ease-in-out infinite; }
+}
+@keyframes demo-pulse {
+  50% { box-shadow: 0 0 0 3px var(--color-linen), 0 0 0 10px rgb(215 38 30 / 0.35); }
+}
+
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+/* Scroll-only demo targets: no ring */
+[data-demo="portfolio"].demo-spot { box-shadow: none; animation: none; }
