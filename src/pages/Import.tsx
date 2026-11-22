@@ -2,13 +2,20 @@
 import { CheckmarkCircle02Icon } from '@hugeicons/core-free-icons'
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
-import { art } from '../art/generateArt'
+import { P } from '../data/commons'
 import { Maze } from '../components/Maze'
 import { Button, Icon, Pic, Wordmark, toast } from '../components/ui'
-import type { ArtStyle, Work } from '../data/types'
+import type { Picture, Work } from '../data/types'
 import { works as allSeedWorks } from '../data/works'
 import { EASE, gsap, reducedMotion } from '../motion/motion'
 import { useApp } from '../state/AppContext'
+
+/** Real works shown when an account other than Camille imports a portfolio in the demo. */
+const IMPORT_POOL: Record<string, Picture[]> = {
+  tiago: [P.favrileVase, P.favrileVase2, P.favrileVase3, P.magnolias, P.windowDesign2],
+  helena: [P.bronzeAge, P.thinker],
+  default: [P.melencolia, P.redFuji, P.anatomy, P.orchestra, P.artOfPainting],
+}
 
 const DRAFT_BIO: Record<string, string> = {
   marta: 'Sculpture student at FBAUL (3rd year). I carve marble and cast bronze: bodies, movement, time. Preparing a light installation of The Mature Age for my graduation show.',
@@ -25,7 +32,7 @@ export default function ImportPage() {
   const found: Work[] =
     me.id === 'marta'
       ? allSeedWorks.filter((w) => w.ownerId === 'marta')
-      : (['strata', 'stone', 'hatch', 'orbs', 'blocks'] as ArtStyle[]).map((style, i) => ({
+      : (IMPORT_POOL[me.id] ?? IMPORT_POOL.default).map((picture, i) => ({
           id: `${me.id}-imp-${i}`,
           ownerId: me.id,
           title: `Untitled ${i + 1}`,
@@ -35,7 +42,7 @@ export default function ImportPage() {
           dimensions: '',
           discipline: me.discipline ?? 'Painting',
           topics: me.topics.slice(0, 2),
-          picture: art(style, 800 + i * 7 + me.id.length, [0.8, 1, 0.75, 1.2, 0.9][i]),
+          picture,
           blocks: [{ type: 'text', title: 'About the work', body: 'Imported caption. Edit this text.' }],
         }))
 

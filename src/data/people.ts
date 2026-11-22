@@ -1,5 +1,5 @@
 // Students, alumni and teachers are great artists from art history, reimagined as FBAUL students in Lisbon today.
-// Their pictures are their real works (public domain, see commons.ts). Organisations and the collector are fictional.
+// Their pictures are their real works (public domain, see commons.ts). Organisations and the collector are fictional; their pictures are period artworks too.
 import { P } from './commons'
 import type { Person } from './types'
 
@@ -70,6 +70,7 @@ export const people: Person[] = [
     materials: [],
     area: 'Marvila',
     avatar: av(3),
+    photo: P.louvreGallery,
     checked: true,
     website: 'galeriafio.example',
   },
@@ -191,20 +192,20 @@ export const people: Person[] = [
     id: 'armazem', name: 'Armazém 9', role: 'provider', orgType: 'Venue', programme: 'Event and project space',
     bio: 'A riverside warehouse that hosts installations, concerts and one-night shows. We pay for production.',
     skills: ['Large installations', 'One-night shows'], topics: ['Installation', 'Sound', 'Light'], materials: [],
-    area: 'Alcântara', avatar: av(23), checked: true,
+    area: 'Alcântara', avatar: av(23), photo: P.fallingRocket, checked: true,
   },
   {
     id: 'oficina', name: 'Oficina Lume', role: 'provider', orgType: 'Studio', programme: 'Design and production studio',
     bio: 'Lighting and furniture studio. We commission young designers for hotel and restaurant pieces.',
     skills: ['Commissions', 'Production'], topics: ['Light', 'Objects'], materials: [],
-    area: 'Marvila', avatar: av(24), checked: true,
+    area: 'Marvila', avatar: av(24), photo: P.lampDesign, checked: true,
   },
 
   // ---- Spectator --------------------------------------------------------
   {
     id: 'joana', name: 'Joana Frade', role: 'spectator', programme: 'Collector',
     bio: 'I collect works on paper by young Lisbon artists.',
-    skills: [], topics: ['Drawing', 'Print'], materials: [], area: 'Chiado', avatar: av(25),
+    skills: [], topics: ['Drawing', 'Print'], materials: [], area: 'Chiado', avatar: av(25), photo: P.melencolia,
   },
 ]
 

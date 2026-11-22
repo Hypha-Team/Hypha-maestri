@@ -1,6 +1,6 @@
 # HYPHA — pitch prototype (Maestri edition)
 
-Version of the HYPHA prototype where the users are great artists from art history, with their real works (public domain / CC0, hot-linked from Wikimedia Commons, see `src/data/commons.ts`). The original version lives in [Hypha-Team/hypha](https://github.com/Hypha-Team/hypha).
+Version of the HYPHA prototype where the users are great artists from art history, with their real works (public domain / CC0 from Wikimedia Commons). The images are stored in `public/works/`, listed in `src/data/commons.json`. The GitHub Action *Fetch works and deploy* downloads any missing image, saves it in the repo, builds the site and publishes it, on every push to `main`. The original version lives in [Hypha-Team/hypha](https://github.com/Hypha-Team/hypha).
 
 Clickable prototype of HYPHA, the networking platform for Fine Arts students in Lisbon.
 Sample data only, no backend. Everything you do is saved in the browser (localStorage).

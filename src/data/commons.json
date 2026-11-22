@@ -1,0 +1,366 @@
+[
+ {
+  "key": "ageMur",
+  "file": "L'Âge_Mûr.jpg",
+  "w": 1024,
+  "h": 768,
+  "ext": "jpg"
+ },
+ {
+  "key": "valse",
+  "file": "La_Valse.jpg",
+  "w": 1181,
+  "h": 1759,
+  "ext": "jpg"
+ },
+ {
+  "key": "vague",
+  "file": "Camille_Claudel,_Vague.jpg",
+  "w": 5184,
+  "h": 3888,
+  "ext": "jpg"
+ },
+ {
+  "key": "chatelaine",
+  "file": "Camille_Claudel_La_petite_châtelaine_Musée_Rodin_31102018_1.jpg",
+  "w": 2621,
+  "h": 3162,
+  "ext": "jpg"
+ },
+ {
+  "key": "peacockLamp",
+  "file": "Clara_Wolcott_Driscoll_(American,_1861-1944),_Tiffany_Studios_(American,_1902-1932)_-_Peacock_Table_Lamp_-_2018.281_-_Cleveland_Museum_of_Art.jpg",
+  "w": 2598,
+  "h": 3400,
+  "ext": "jpg"
+ },
+ {
+  "key": "bellaWindow",
+  "file": "Bella_apartment_window_by_Louis_Comfort_Tiffany,_c._1880,_Metropolitan_Museum_of_Art.JPG",
+  "w": 1860,
+  "h": 1296,
+  "ext": "jpg"
+ },
+ {
+  "key": "windowDesign",
+  "file": "Design_for_window_by_Louis_Comfort_Tiffany,_Metropolitan_Museum_of_Art.JPG",
+  "w": 1804,
+  "h": 3213,
+  "ext": "jpg"
+ },
+ {
+  "key": "thinker",
+  "file": "Le_Penseur_by_Rodin_(Kunsthalle_Bielefeld)_2014-04-10.JPG",
+  "w": 3000,
+  "h": 4000,
+  "ext": "jpg"
+ },
+ {
+  "key": "strawberryThief",
+  "file": "Strawberrythief.jpg",
+  "w": 736,
+  "h": 472,
+  "ext": "jpg"
+ },
+ {
+  "key": "horse",
+  "file": "The_Horse_in_motion._\"Abe_Edgington,\"_owned_by_Leland_Stanford;_driven_by_C._Marvin,_trotting_at_a_2-24_gait_over_the_Palo_Alto_track,_15th_June_1878_LOC_13624627695.jpg",
+  "w": 1024,
+  "h": 652,
+  "ext": "jpg"
+ },
+ {
+  "key": "impression",
+  "file": "Monet_-_Impression,_Sunrise.jpg",
+  "w": 5773,
+  "h": 4478,
+  "ext": "jpg"
+ },
+ {
+  "key": "waterLilies",
+  "file": "Reflections_of_Clouds_on_the_Water-Lily_Pond.jpg",
+  "w": 3463,
+  "h": 1978,
+  "ext": "jpg"
+ },
+ {
+  "key": "steerage",
+  "file": "Alfred_Stieglitz_-_The_Steerage_-_Google_Art_Project.jpg",
+  "w": 4150,
+  "h": 5203,
+  "ext": "jpg"
+ },
+ {
+  "key": "prayingHands",
+  "file": "Albrecht_Dürer_-_Praying_Hands,_1508_-_Google_Art_Project.jpg",
+  "w": 2680,
+  "h": 3900,
+  "ext": "jpg"
+ },
+ {
+  "key": "hare",
+  "file": "Albrecht_Dürer_-_Hare,_1502_-_Google_Art_Project.jpg",
+  "w": 3731,
+  "h": 4123,
+  "ext": "jpg"
+ },
+ {
+  "key": "moonDrawing",
+  "file": "Le_voyage_dans_la_lune_drawing.jpg",
+  "w": 1024,
+  "h": 774,
+  "ext": "jpg"
+ },
+ {
+  "key": "laGoulue",
+  "file": "Henri_de_Toulouse-Lautrec,_Moulin_Rouge_-_La_Goulue,_1891_-_The_Metropolitan_Museum_of_Art.jpg",
+  "w": 2314,
+  "h": 3722,
+  "ext": "jpg"
+ },
+ {
+  "key": "sibyl",
+  "file": "Michelangelo_Buonarroti_-_Study_for_the_Libyan_Sibyl_-_WGA15540.jpg",
+  "w": 692,
+  "h": 900,
+  "ext": "jpg"
+ },
+ {
+  "key": "starryNight",
+  "file": "Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+  "w": 44567,
+  "h": 35291,
+  "ext": "jpg"
+ },
+ {
+  "key": "sunflowers",
+  "file": "Vincent_Willem_van_Gogh_127.jpg",
+  "w": 3349,
+  "h": 4226,
+  "ext": "jpg"
+ },
+ {
+  "key": "vitruvian",
+  "file": "Da_Vinci_Vitruve_Luc_Viatour.jpg",
+  "w": 2258,
+  "h": 3070,
+  "ext": "jpg"
+ },
+ {
+  "key": "ermine",
+  "file": "Lady_with_an_Ermine_-_Leonardo_da_Vinci_(adjusted_levels).jpg",
+  "w": 2048,
+  "h": 2754,
+  "ext": "jpg"
+ },
+ {
+  "key": "calling",
+  "file": "Caravaggio_—_The_Calling_of_Saint_Matthew.jpg",
+  "w": 8792,
+  "h": 8304,
+  "ext": "jpg"
+ },
+ {
+  "key": "milkmaid",
+  "file": "Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.png",
+  "w": 9839,
+  "h": 11058,
+  "ext": "png"
+ },
+ {
+  "key": "pearl",
+  "file": "1665_Girl_with_a_Pearl_Earring.jpg",
+  "w": 12285,
+  "h": 14550,
+  "ext": "jpg"
+ },
+ {
+  "key": "artOfPainting",
+  "file": "Jan_Vermeer_-_The_Art_of_Painting_-_Google_Art_Project.jpg",
+  "w": 6209,
+  "h": 7377,
+  "ext": "jpg"
+ },
+ {
+  "key": "littleDancer",
+  "file": "The_Little_Fourteen-Year-Old_Dancer_MET_DP-14939-005.jpg",
+  "w": 2887,
+  "h": 4000,
+  "ext": "jpg"
+ },
+ {
+  "key": "carceri",
+  "file": "Giovanni_Battista_Piranesi_-_Le_Carceri_d'Invenzione_-_Second_Edition_-_1761_-_01_-_Title_Plate.jpg",
+  "w": 1551,
+  "h": 2000,
+  "ext": "jpg"
+ },
+ {
+  "key": "greatWave",
+  "file": "Tsunami_by_hokusai_19th_century.jpg",
+  "w": 3859,
+  "h": 2594,
+  "ext": "jpg"
+ },
+ {
+  "key": "redFuji",
+  "file": "「富嶽三十六景_凱風快晴」-South_Wind,_Clear_Sky_(Gaifū_kaisei),_also_known_as_Red_Fuji,_from_the_series_Thirty-six_Views_of_Mount_Fuji_(Fugaku_sanjūrokkei)_MET_DP141062.jpg",
+  "w": 3865,
+  "h": 2665,
+  "ext": "jpg"
+ },
+ {
+  "key": "kiss",
+  "file": "The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg",
+  "w": 7376,
+  "h": 7401,
+  "ext": "jpg"
+ },
+ {
+  "key": "adele",
+  "file": "Gustav_Klimt,_1907,_Adele_Bloch-Bauer_I,_Neue_Galerie_New_York.jpg",
+  "w": 2036,
+  "h": 2035,
+  "ext": "jpg"
+ },
+ {
+  "key": "venus",
+  "file": "Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+  "w": 30000,
+  "h": 18840,
+  "ext": "jpg"
+ },
+ {
+  "key": "primavera",
+  "file": "Botticelli-primavera.jpg",
+  "w": 4926,
+  "h": 3236,
+  "ext": "jpg"
+ },
+ {
+  "key": "nightWatch",
+  "file": "La_ronda_de_noche,_por_Rembrandt_van_Rijn.jpg",
+  "w": 14168,
+  "h": 11528,
+  "ext": "jpg"
+ },
+ {
+  "key": "anatomy",
+  "file": "Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg",
+  "w": 6000,
+  "h": 4520,
+  "ext": "jpg"
+ },
+ {
+  "key": "claudelDrawing",
+  "file": "Camille_Claudel_dessin_01.jpg",
+  "w": 915,
+  "h": 1219,
+  "ext": "jpg"
+ },
+ {
+  "key": "vertumnus",
+  "file": "Vertumnus_and_Pomona_by_Camille_Claudel.jpg",
+  "w": 1461,
+  "h": 2202,
+  "ext": "jpg"
+ },
+ {
+  "key": "clotho",
+  "file": "Camille_Claudel_-_Torse_de_Clotho,_1893.jpg",
+  "w": 4000,
+  "h": 6000,
+  "ext": "jpg"
+ },
+ {
+  "key": "lampDesign",
+  "file": "Suggestion_for_Lamp_for_Miss_H._W._Perkins_by_the_Tiffany_Studios_MET_DP160121.jpg",
+  "w": 2969,
+  "h": 3812,
+  "ext": "jpg"
+ },
+ {
+  "key": "windowDesign2",
+  "file": "Design_for_window_MET_DP286779.jpg",
+  "w": 2142,
+  "h": 3890,
+  "ext": "jpg"
+ },
+ {
+  "key": "favrileVase",
+  "file": "Vase_MET_DP116224.jpg",
+  "w": 3961,
+  "h": 4000,
+  "ext": "jpg"
+ },
+ {
+  "key": "favrileVase2",
+  "file": "Vase_MET_ADA3340.jpg",
+  "w": 1840,
+  "h": 2332,
+  "ext": "jpg"
+ },
+ {
+  "key": "favrileVase3",
+  "file": "Vase_MET_DP133527.jpg",
+  "w": 3615,
+  "h": 3788,
+  "ext": "jpg"
+ },
+ {
+  "key": "magnolias",
+  "file": "Magnolias_and_Irises_MET_DT280214.jpg",
+  "w": 2724,
+  "h": 3850,
+  "ext": "jpg"
+ },
+ {
+  "key": "louvreGallery",
+  "file": "Gallery_of_the_Louvre_1831-33_Samuel_Morse.jpg",
+  "w": 2500,
+  "h": 1711,
+  "ext": "jpg"
+ },
+ {
+  "key": "fallingRocket",
+  "file": "Whistler-Nocturne_in_black_and_gold.jpg",
+  "w": 4371,
+  "h": 5807,
+  "ext": "jpg"
+ },
+ {
+  "key": "orchestra",
+  "file": "Edgar_Degas_-_The_Orchestra_at_the_Opera_-_Google_Art_Project.jpg",
+  "w": 2472,
+  "h": 3017,
+  "ext": "jpg"
+ },
+ {
+  "key": "melencolia",
+  "file": "Melencolia_I_MET_MM13762.jpg",
+  "w": 3143,
+  "h": 4000,
+  "ext": "jpg"
+ },
+ {
+  "key": "bronzeAge",
+  "file": "The_Bronze_Age_(L'Age_d'airain)_MET_DT5170.jpg",
+  "w": 2011,
+  "h": 3722,
+  "ext": "jpg"
+ },
+ {
+  "key": "moonColor",
+  "file": "Melies_color_Voyage_dans_la_lune.jpg",
+  "w": 2362,
+  "h": 1795,
+  "ext": "jpg"
+ },
+ {
+  "key": "moonWorkshop",
+  "file": "Trip_to_the_Moon_Workshop.png",
+  "w": 1440,
+  "h": 1080,
+  "ext": "png"
+ }
+]
