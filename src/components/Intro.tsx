@@ -9,7 +9,7 @@
   exactly like the maze lines in the logo.
 */
 import { useRef, type ReactElement } from 'react'
-import { gsap, reducedMotion, useGSAP } from '../motion/motion'
+import { gsap, lowPower, reducedMotion, useGSAP } from '../motion/motion'
 
 // Each letter as ONE continuous line (viewBox 0 0 900 400), so it moves like a serpent.
 const LETTERS = [
@@ -37,7 +37,34 @@ const FADE = 0.4
 const RED = 'var(--color-red)'
 const LINEN = 'var(--color-linen)'
 
+/** Phones: the stroke animation redraws ~135 huge SVG paths on every frame, which stutters on
+ *  mobile GPUs. There we show the logo poster instead and only animate opacity and scale,
+ *  which the GPU composites without repainting. */
+function IntroLight({ onDone }: { onDone: () => void }) {
+  const root = useRef<HTMLDivElement>(null)
+  useGSAP(
+    () => {
+      if (reducedMotion()) return onDone()
+      const img = root.current!.querySelector('img')!
+      gsap.timeline({ onComplete: onDone })
+        .fromTo(img, { opacity: 0, scale: 1.12 }, { opacity: 1, scale: 1, duration: 1.1, ease: 'power3.out', force3D: true })
+        .to({}, { duration: 0.5 })
+        .to(root.current, { opacity: 0, duration: FADE, ease: 'power2.in' })
+    },
+    { scope: root },
+  )
+  return (
+    <div ref={root} className="fixed inset-0 z-[100] overflow-hidden bg-linen" aria-hidden="true" onClick={onDone}>
+      <img src={`${import.meta.env.BASE_URL}logo.jpg`} alt="" className="h-full w-full object-contain will-change-transform" decoding="async" />
+    </div>
+  )
+}
+
 export default function Intro({ onDone }: { onDone: () => void }) {
+  return lowPower() ? <IntroLight onDone={onDone} /> : <IntroFull onDone={onDone} />
+}
+
+function IntroFull({ onDone }: { onDone: () => void }) {
   const root = useRef<HTMLDivElement>(null)
   const svg = useRef<SVGSVGElement>(null)
 

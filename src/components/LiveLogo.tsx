@@ -55,7 +55,7 @@ void main() {
 
 export default function LiveLogo({ alt, className = '' }: { alt: string; className?: string }) {
   const canvas = useRef<HTMLCanvasElement>(null)
-  const [fallback, setFallback] = useState(() => reducedMotion())
+  const [fallback, setFallback] = useState(() => reducedMotion() || lowPower())
 
   useEffect(() => {
     if (fallback) return
