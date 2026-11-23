@@ -67,9 +67,9 @@ export default function Welcome() {
 
   return (
     <div className="min-h-dvh bg-linen md:grid md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]">
-      {/* The embroidered logo, shown whole */}
+      {/* The logo, shown whole */}
       <div className="relative h-[42dvh] overflow-hidden md:sticky md:top-0 md:h-dvh">
-        <LiveLogo alt="HYPHA logo: the word HYPHA embroidered in red, surrounded by maze-like red lines on linen" />
+        <LiveLogo alt="HYPHA logo: the word HYPHA in bold rounded red letters, surrounded by wavy red lines on a pale peach background" />
       </div>
 
       <div className="relative mx-auto flex w-full max-w-xl flex-col px-5 pt-6 pb-10 md:justify-center md:px-12">

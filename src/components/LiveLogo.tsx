@@ -1,5 +1,5 @@
 /*
-  The embroidered logo, alive: when the pointer (or a finger) moves over it,
+  The logo, alive: when the pointer (or a finger) moves over it,
   the red threads bend around it like fabric pushed by a hand, ripple softly,
   and get dragged a little in the direction you move. They settle back when you leave.
 
@@ -8,7 +8,7 @@
   Tune the feel with the numbers in FEEL.
 */
 import { useEffect, useRef, useState } from 'react'
-import { reducedMotion } from '../motion/motion'
+import { lowPower, reducedMotion } from '../motion/motion'
 
 /** The logo works both at the site root and under /hypha/ on GitHub Pages. */
 const LOGO = `${import.meta.env.BASE_URL}logo.jpg`
@@ -60,7 +60,8 @@ export default function LiveLogo({ alt, className = '' }: { alt: string; classNa
   useEffect(() => {
     if (fallback) return
     const c = canvas.current!
-    const gl = c.getContext('webgl', { premultipliedAlpha: false, antialias: true })
+    const light = lowPower() // phones: fewer pixels to redraw, no antialiasing
+    const gl = c.getContext('webgl', { premultipliedAlpha: false, antialias: !light, powerPreference: 'low-power' })
     if (!gl) { console.warn('LiveLogo: no WebGL'); return setFallback(true) }
 
     const shader = (type: number, src: string) => {
@@ -151,7 +152,7 @@ export default function LiveLogo({ alt, className = '' }: { alt: string; classNa
 
     const resize = () => {
       const r = c.getBoundingClientRect()
-      const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const dpr = Math.min(window.devicePixelRatio || 1, light ? 1.5 : 2)
       c.width = Math.max(1, Math.round(r.width * dpr))
       c.height = Math.max(1, Math.round(r.height * dpr))
       draw()

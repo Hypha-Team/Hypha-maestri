@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router'
 import { pictureSrc } from '../art/generateArt'
 import type { Person, ProjectCall, Work } from '../data/types'
-import { reducedMotion, rememberRect } from '../motion/motion'
+import { lowPower, reducedMotion, rememberRect } from '../motion/motion'
 import { useApp } from '../state/AppContext'
 import Masonry from './reactbits/Masonry'
 import { Avatar, Button, CheckedBadge, Icon, Pic, Sheet, Tag, UniBadge, toast, useAgo } from './ui'
@@ -65,7 +65,7 @@ export function WorkGrid({ works, columnWidth = 220, showOwner = true }: { works
         duration={0.5}
         bounce={0}
         blurToFocus={false}
-        hoverEffect="lift"
+        hoverEffect={lowPower() ? 'none' : 'lift'}
         captions="hover"
         lightbox={false}
         draggable={false}

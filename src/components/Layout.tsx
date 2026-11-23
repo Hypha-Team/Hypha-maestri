@@ -230,7 +230,7 @@ export default function Layout() {
 
       <div className="min-w-0">
         {/* Phone header */}
-        <header className="sticky top-0 z-40 flex items-center justify-between gap-3 bg-linen/90 px-4 py-2.5 backdrop-blur md:hidden">
+        <header className="sticky top-0 z-40 flex items-center justify-between gap-3 bg-linen px-4 py-2.5 md:hidden">
           <NavLink to={nav[0].to} aria-label="HYPHA home">
             <Wordmark className="text-[28px]" />
           </NavLink>
@@ -246,7 +246,7 @@ export default function Layout() {
       </div>
 
       {/* Phone bottom bar */}
-      <nav aria-label="Main" className="safe-bottom fixed inset-x-0 bottom-0 z-40 border-t border-linen-deep bg-linen/95 backdrop-blur md:hidden">
+      <nav aria-label="Main" className="safe-bottom fixed inset-x-0 bottom-0 z-40 border-t border-linen-deep bg-linen md:hidden">
         <ul className="mx-auto flex max-w-md items-stretch justify-around px-2 pt-1.5 pb-1.5">
           {nav.filter((n) => !n.desktopOnly).map((n) => (
             <li key={n.to} className="flex-1">

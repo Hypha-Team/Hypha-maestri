@@ -1,5 +1,5 @@
 /*
-  First-load moment, like the embroidered logo.
+  First-load moment, like the logo.
   Red serpent lines slither in from the edges of the screen, one ring after the other,
   each one following the shape of the letters, until the last ones stitch the word HYPHA.
 
@@ -20,14 +20,16 @@ const LETTERS = [
   'M 715 290 L 775 110 L 835 290 L 813 228 H 737', // A
 ]
 
+// Thick bands like the logo. Fewer, wider rings also keep phones smooth:
+// every ring is 10 SVG paths redrawn on each frame of the animation.
 const LETTER = 46 // thickness of the letters
-const LINE = 15 // thickness of each red line
-const GAP = 15 // linen space between lines
-const RINGS = 30 // how many lines around the word
+const LINE = 34 // thickness of each red line
+const GAP = 32 // linen space between lines
+const RINGS = 13 // how many lines around the word (enough to fill a phone screen)
 
 // Timing (seconds)
 const DRAW = 1.2 // how long one line takes to slither in
-const NEXT_RING = 0.035 // delay between one ring and the next one inside it
+const NEXT_RING = 0.08 // delay between one ring and the next one inside it
 const NEXT_LETTER = 0.05 // small left-to-right wave across the letters
 const HOLD = 0.5 // the finished word stays on screen
 const FADE = 0.4

@@ -21,6 +21,10 @@ export const EASE = 'power3.out'
 export const reducedMotion = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
+/** Phones and tablets (touch screens): use lighter versions of the heavier effects. */
+export const lowPower = () =>
+  typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches
+
 let lenis: Lenis | null = null
 
 /** Starts Lenis and keeps ScrollTrigger in sync. Skipped when the user prefers reduced motion. */
